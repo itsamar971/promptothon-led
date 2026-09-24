@@ -121,8 +121,9 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
     <div
       id="badge-card"
       style={{
-        width: forExport ? "600px" : "100%",
-        aspectRatio: "1 / 1",
+        width: "600px",
+        height: "600px",
+        zoom: forExport ? 1 : "min(1, calc((100vw - 3rem) / 600))",
         fontFamily: "'Space Grotesk', sans-serif",
         backgroundColor: "#F0F6FF",
         backgroundImage: "radial-gradient(var(--theme-primary) 1.5px, transparent 1.5px)",
@@ -705,7 +706,9 @@ export default function PromptothonBadgePage() {
 
             {/* Badge */}
             <div className={mounted ? "badge-float" : ""}>
-              <BadgeCard name={name} college={college} imagePreview={imagePreview} quoteIndex={quoteIndex} forExport={false} />
+              <div className="w-full flex justify-center pb-4">
+                <BadgeCard name={name} college={college} imagePreview={imagePreview} quoteIndex={quoteIndex} forExport={false} />
+              </div>
             </div>
 
             {/* Stickers row */}
