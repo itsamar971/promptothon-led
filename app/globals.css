@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+body {
+  background-color: #F0F6FF;
+  background-image: radial-gradient(var(--theme-primary) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: #000000;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F0F6FF; border-left: 2px solid #000; }
+::-webkit-scrollbar-thumb { background: var(--theme-primary); border: 2px solid #000; }
+::-webkit-scrollbar-thumb:hover { background: #003ACC; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+  white-space: nowrap;
+  display: flex;
+  width: max-content;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+.badge-float { animation: floatCard 4s ease-in-out infinite; }
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50%       { transform: rotate(2deg); }
+}
+.sticker-hover:hover { animation: wobble 0.4s ease-in-out; }
