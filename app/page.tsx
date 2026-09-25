@@ -104,7 +104,7 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
 
   const tickerContent = (
     <>
-      <span style={{ color: "#38BDF8", marginRight: 10 }}>&#9889; 48 HRS HACK</span>
+      <span style={{ color: "#38BDF8", marginRight: 10 }}>&#9889; 24 HRS HACK</span>
       <span style={{ color: "#FACC15", marginRight: 10 }}>&#x2022;</span>
       <span style={{ color: "#fff", marginRight: 10 }}>OFFICIAL PASS</span>
       <span style={{ color: "#FACC15", marginRight: 10 }}>&#x2022;</span>
@@ -161,7 +161,7 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
       {/* MAIN BODY */}
       <div style={{
         flex: 1, display: "flex", flexDirection: "column",
-        padding: "12px", gap: "9px", minHeight: 0,
+        padding: "4px 12px", gap: "10px", minHeight: 0,
       }}>
 
         {/* ROW 1: Title + Photo side by side */}
@@ -180,7 +180,7 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
 
             {/* Event name */}
             <h2 style={{
-              fontSize: "clamp(26px, 6.5vw, 42px)", fontWeight: 900,
+              fontSize: "clamp(20px, 5.5vw, 32px)", fontWeight: 900,
               letterSpacing: "-0.04em", lineHeight: 0.88, color: "#000",
               margin: 0, textTransform: "uppercase" as const,
             }}>{EVENT.name}</h2>
@@ -235,12 +235,12 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
 
           {/* RIGHT: BIG Photo + badges */}
           <div style={{
-            width: "290px", flexShrink: 0, display: "flex",
-            flexDirection: "column", alignItems: "center", gap: "7px",
+            width: "220px", flexShrink: 0, display: "flex",
+            flexDirection: "column", alignItems: "center", gap: "5px",
           }}>
             {/* Large photo */}
             <div style={{
-              width: "270px", height: "270px",
+              width: "210px", height: "210px",
               border: "5px solid #000",
               outline: "4px solid var(--theme-primary)",
               outlineOffset: "3px",
@@ -340,30 +340,30 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
           flex: 1
         }}>
           <div style={{
-            background: "#000", color: "#fff", padding: "6px 12px",
+            background: "#000", color: "#fff", padding: "4px 10px",
             fontSize: "10px", fontWeight: 900, textTransform: "uppercase" as const,
             letterSpacing: "0.1em", display: "flex", alignItems: "center", gap: "6px"
           }}>
             <span style={{ color: "#FACC15", fontSize: "12px" }}>&#9889;</span> EVENT DETAILS
           </div>
           <div style={{
-            padding: "8px 10px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", flex: 1, alignItems: "stretch"
+            padding: "4px 8px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px", flex: 1, alignItems: "stretch"
           }}>
             {[
-              { icon: "&#128197;", bg: "var(--theme-primary)", iconColor: "#fff", label: "DATES", value: "26 & 27 SEPTEMBER 2026", sub: "48-hour AI Hackathon" },
+              { icon: "&#128197;", bg: "var(--theme-primary)", iconColor: "#fff", label: "DATES", value: "26 & 27 SEPTEMBER 2026", sub: "24-hour AI Hackathon" },
               { icon: "&#128205;", bg: "#FACC15", iconColor: "#000", label: "VENUE", value: "AVN INSTITUTE OF ENGG & TECH", sub: "Hyderabad, Telangana" },
               { icon: "&#128421;", bg: "#A3E635", iconColor: "#000", label: "TRACK", value: "PROMPT ENGINEERING", sub: "AI Builder \u00B7 LLM Projects" },
               { icon: "&#11088;", bg: "#38BDF8", iconColor: "#000", label: "HASHTAG", value: EVENT.hashtag, sub: "#AI #PromptEngineering" },
             ].map(({ icon, bg, label, value, sub }) => (
               <div key={label} style={{
-                display: "flex", gap: "8px", alignItems: "flex-start",
-                border: "2px solid #000", padding: "8px",
-                background: "#F8FAFC", boxShadow: "3px 3px 0px #000"
+                display: "flex", gap: "6px", alignItems: "flex-start",
+                border: "2px solid #000", padding: "4px",
+                background: "#F8FAFC", boxShadow: "2px 2px 0px #000"
               }}>
                 <div style={{
-                  width: "32px", height: "32px", border: "2px solid #000",
+                  width: "28px", height: "28px", border: "2px solid #000",
                   display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, backgroundColor: bg,
-                  fontSize: "16px", boxShadow: "2px 2px 0px rgba(0,0,0,0.2)"
+                  fontSize: "14px", boxShadow: "2px 2px 0px rgba(0,0,0,0.2)"
                 }} dangerouslySetInnerHTML={{ __html: icon }} />
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <p style={{ fontSize: "9px", fontWeight: 900, textTransform: "uppercase" as const, letterSpacing: "0.1em", color: "var(--theme-primary)", margin: 0 }}>{label}</p>
@@ -388,7 +388,7 @@ function BadgeCard({ name, college, imagePreview, quoteIndex, forExport = false 
             textTransform: "uppercase" as const, letterSpacing: "0.08em",
             padding: "0 12px", display: "flex", justifyContent: "space-between",
           }}>
-            <span style={{ color: "#38BDF8" }}>&#9889; 48 HRS HACK</span>
+            <span style={{ color: "#38BDF8" }}>&#9889; 24 HRS HACK</span>
             <span style={{ color: "#FACC15" }}>OFFICIAL PASS</span>
             <span style={{ color: "#A3E635" }}>{EVENT.hashtag}</span>
             <span style={{ color: "#38BDF8" }}>AI EDITION 2026</span>
